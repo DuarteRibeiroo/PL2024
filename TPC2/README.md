@@ -1,0 +1,7 @@
+# TPC2
+
+## Autor
+- Duarte Ribeiro (a100764)
+
+Neste TPC, foi-nos pedido para implementar parte de um conversor de _Markdown_ para _HTML_. Em markdown, existem certos delimitadores que, quando usados, têm um efeito no texto dentro dos mesmos. Para reconhecer texto destes delimitadores, foi utilizada uma expressão regular (_regex_) para cada tipo de delimitador. Cada linha do texto é então analisada para identificar a presença desses delimitadores e efetuada a troca para os delimitadores presentes em _HTML_. 
+A parte mais complexa do problema apresentado foi a conversão de listas numeradas. Isto acontece devido à existência de um delimitador geral para o início e fim da lista numerada. Visto que este implementação do programa avalia o input linha a linha, não seria possível reconhecer a lista inteira de uma vez, e mesmo uma versão do programa que lesse o texto todo de uma vez teria problemas com a captura do texto de todas as linhas, e teria então de ser criado na mesma uma expressão regular extra para reconhecer cada linha. Deste modo optei por manter o reconhecimento linha a linha, e a utilização de uma variável auxiliar para detetar o início e fim da lista ordenada e criar os delimitadores da mesma.
